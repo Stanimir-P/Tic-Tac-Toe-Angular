@@ -1,0 +1,8 @@
+<div class="backdrop">
+    <title
+    [ngClass]="winner === 'X' ? 'winner-x' : 'winner-o'">
+        Winner: {{winner}}!
+    </title>
+
+    <button class="new-game-button-backdrop" (click)="newGame">NEW GAME</button>
+</div>

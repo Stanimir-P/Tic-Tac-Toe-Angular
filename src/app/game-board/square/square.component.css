@@ -1,0 +1,15 @@
+button { 
+    width: 100%;
+    height: 100%;
+    font-size: 5em;
+    background-color: #78A083;
+    border: none;
+}
+
+button[value='X'] {
+    color: #C7B7A3;
+}
+
+button[value='O'] {
+    color: #212121;
+}

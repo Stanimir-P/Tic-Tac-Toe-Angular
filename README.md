@@ -1,27 +1,19 @@
-# TicTacToeDev
+# Tic Tac Toe Game
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.2.
+Tic Tac Toe is a two-player game in which the objective is to take turns and mark the correct spaces in a 3x3 grid. Think on your feet but also be careful, as the first player who places three of their marks in a horizontal, vertical or diagonal row wins the game!
 
-## Development server
+![Tic Tac Toe game](./src/assets/tic-tac-toeSC.png)
+![Tic Tac Toe game](./src/assets/tic-tac-toeSC2.png)
+![Tic Tac Toe game](./src/assets/tic-tac-toeSC3.png)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Technologies used
 
-## Code scaffolding
+The Tic Tac Toe Angular web app was built using the following technologies:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Angular: web app build
+- TypeScript: web app's logic
+- CSS: plain CSS for styling
 
-## Build
+## Deployment
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+[Tic Tac Toe Angular Game](https://stanimir-p.github.io/Tic-Tac-Toe-Angular/)

@@ -1,0 +1,60 @@
+/* BACKDROP */
+.backdrop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  z-index:9999;
+}
+  
+title {
+  display: flex;
+  font-size: 5em;
+  margin-top: 3em;
+  margin-bottom: 1em;
+  outline: black;
+}
+
+.winner-x {
+  color: #C7B7A3;
+}
+
+.winner-o {
+  color: #212121;
+}
+
+.new-game-button-backdrop {
+  --b: 3px;   /* border thickness */
+  --s: .45em; /* size of the corner */
+  --color: #373B44;
+
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 2em;
+  border: 0;
+  transition: .3s linear, color 0s, background-color 0s;
+}
+
+.new-game-button-backdrop:hover,
+.new-game-button-backdrop:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+.new-game-button-backdrop:active {
+  background: var(--color);
+  color: #C7B7A3;
+}

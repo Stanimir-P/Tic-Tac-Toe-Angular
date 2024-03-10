@@ -1,0 +1,13 @@
+<h1>Current Player: {{ playerTurn }} </h1>
+
+<button class="new-game-button" (click)="newGame">Start new Game</button>
+
+<main class="grid-container">
+    <app-square 
+        *ngFor="let value of squares; let i = index" 
+        [value]="value"
+        (click)="makeMove(i)"> 
+    </app-square>
+</main>
+
+<app-backdrop *ngIf="winner"></app-backdrop>
