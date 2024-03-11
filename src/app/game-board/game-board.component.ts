@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AppStateService } from '../shared/appState.service';
-import { calculateWinner } from '../shared/helperFunctions';
-import { Player } from '../shared/interfaces';
+import { AppStateService } from '../services/appState.service';
+import { calculateWinner } from '../utils/calculateWinner';
+import { Player } from '../utils/interfaces';
 
 @Component({
   selector: 'app-game-board',

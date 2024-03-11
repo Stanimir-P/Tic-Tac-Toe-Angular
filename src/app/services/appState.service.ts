@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { IAppStateService, Player } from './interfaces';
+import { IAppStateService, Player } from '../utils/interfaces';
 
 @Injectable({
   providedIn: 'root'

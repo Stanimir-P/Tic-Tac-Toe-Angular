@@ -1,4 +1,4 @@
-export type Player = 'X' | 'O';
+import { Player } from "./player";
 
 export interface IAppStateService {
     squares: Player[];

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { AppStateService } from '../shared/appState.service';
-import { Player } from '../shared/interfaces';
+import { AppStateService } from '../services/appState.service';
+import { Player } from '../utils/interfaces';
 
 @Component({
   selector: 'app-backdrop',
