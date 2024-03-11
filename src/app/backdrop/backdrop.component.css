@@ -29,7 +29,7 @@ title {
   color: #212121;
 }
 
-.new-game-button-backdrop {
+.new-game-button {
   --b: 3px;   /* border thickness */
   --s: .45em; /* size of the corner */
   --color: #373B44;
@@ -47,14 +47,24 @@ title {
   transition: .3s linear, color 0s, background-color 0s;
 }
 
-.new-game-button-backdrop:hover,
-.new-game-button-backdrop:focus-visible{
+.new-game-button:hover,
+.new-game-button:focus-visible{
   --_p: 0px;
   outline-color: var(--color);
   outline-offset: .05em;
 }
 
-.new-game-button-backdrop:active {
+.new-game-button:active {
   background: var(--color);
   color: #C7B7A3;
+}
+
+@media only screen and (max-width: 1024px) {
+  title {
+    margin-top: 4em;
+    font-size: 4em;
+  }
+  .new-game-button{
+    font-size: 1.5em;
+  }
 }

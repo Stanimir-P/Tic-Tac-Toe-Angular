@@ -13,3 +13,9 @@ button[value='X'] {
 button[value='O'] {
     color: #212121;
 }
+
+@media only screen and (max-width: 1024px) {
+    button {
+        font-size: 4em;
+    }
+}

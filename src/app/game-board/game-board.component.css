@@ -58,3 +58,30 @@ h1 {
 .grid-container app-square:last-child {
     grid-area: 3/3;
 }
+
+@media only screen and (max-width: 1024px) {
+    :host {
+        height: 100vh;
+        padding: 1em;
+        padding-top: 5em;
+    }
+    h1 {
+        font-size: 1.6em;
+        margin-bottom: 2em;
+    }
+    .new-game-button {
+        font-size: 1.3em;
+        padding: 0.5em 0.9em;
+        margin-bottom: 5em;
+    }
+    .grid-container {
+        grid-auto-columns: 7em;
+        grid-auto-rows: 7em;
+        outline: 2px solid #50727B;
+    }
+    .new-game-button:not(:disabled):hover {
+        transform: none;
+        color: #212121;
+        background: #6a8a729c;
+    }
+}
