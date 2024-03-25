@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Player } from '../../utils/interfaces';
 
 @Component({
   selector: 'app-square',
@@ -7,5 +8,5 @@ import { Component, Input } from '@angular/core';
 })
 
 export class SquareComponent  {
-  @Input() value: string | null = null;
+  @Input() value: Player | null = null;
 }

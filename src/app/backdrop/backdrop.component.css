@@ -19,6 +19,7 @@ title {
   margin-top: 3em;
   margin-bottom: 1em;
   outline: black;
+  cursor: default;
 }
 
 .winner-x {

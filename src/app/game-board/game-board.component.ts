@@ -19,10 +19,9 @@ export class GameBoardComponent implements OnInit {
    this.newGame;
   }
 
-  public makeMove(positionIndex: number): void {
-    if (!this.squares[positionIndex]) {
-      this.squares.splice(positionIndex, 1, this.playerTurn);
-      this.appStateService.squares = this.squares;
+  public makeMove(rowIndex: number, columnIndex: number): void {
+    if (!this.squares[rowIndex][columnIndex]) {
+      this.appStateService.setSquares(rowIndex, columnIndex);
 
       this.appStateService.xIsNext = !this.xIsNext;
     }
@@ -30,7 +29,17 @@ export class GameBoardComponent implements OnInit {
     this.appStateService.winner = calculateWinner(this.squares);
   }
 
-  public get squares(): Player[] { return this.appStateService.squares; }
+  public getPlayerValue(value: number): Player | null {
+    if (value === 1) {
+      return Player.X;
+    } else if (value === -1) {
+      return Player.O;
+    } else {
+      return null;
+    }
+  }
+
+  public get squares(): number[][] { return this.appStateService.squares; }
 
   public get xIsNext(): boolean { return this.appStateService.xIsNext; }
 

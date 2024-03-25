@@ -1,1 +1,4 @@
-export type Player = 'X' | 'O';
+export enum Player {
+    X = 'X',
+    O = 'O'
+}

@@ -3,11 +3,14 @@
 <button class="new-game-button" (click)="newGame">Start new Game</button>
 
 <main class="grid-container">
-    <app-square 
-        *ngFor="let value of squares; let i = index" 
-        [value]="value"
-        (click)="makeMove(i)"> 
+    <ng-container *ngFor="let row of squares; let rowIndex = index">
+        <app-square 
+            *ngFor="let value of row; let columnIndex = index" 
+            [value]="getPlayerValue(value)"
+            (click)="makeMove(rowIndex, columnIndex)">
     </app-square>
+    </ng-container>
+
 </main>
 
 <app-backdrop *ngIf="winner"></app-backdrop>

@@ -6,22 +6,31 @@ import { IAppStateService, Player } from '../utils/interfaces';
 })
 
 export class AppStateService implements IAppStateService {
-  private _squares: Player[] = Array(9).fill(null);
+  private _squares: number[][] = [
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0],
+  ];
+  
   private _xIsNext: boolean = true;
   private _winner: Player | null = null;
 
   public newGame(): void {
     this._winner = null;
     this._xIsNext = true;
-    this._squares = Array(9).fill(null);
+    this._squares = [
+      [0, 0, 0],
+      [0, 0, 0],
+      [0, 0, 0],
+    ];
   };
 
-  public get squares(): Player[] {
-    return this._squares
+  setSquares(row: number, column: number): void {
+    this.squares[row][column] = this.playerTurn === Player.X ? 1 : -1;
   }
 
-  public set squares(newValue: Player[]) {
-    this._squares = newValue;
+  public get squares(): number[][] {
+    return this._squares
   }
 
   public get xIsNext(): boolean {
@@ -41,6 +50,6 @@ export class AppStateService implements IAppStateService {
   }
 
   public get playerTurn(): Player {
-    return this.xIsNext ? 'X' : 'O';
+    return this.xIsNext ? Player.X : Player.O;
   }
 }

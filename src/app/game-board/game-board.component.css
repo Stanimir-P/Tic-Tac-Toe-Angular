@@ -11,6 +11,7 @@ h1 {
     font-size: 2em;
     color: #212121;
     margin-bottom: 1em;
+    cursor: default;
 }
 
 /* NEW GAME BUTTON */

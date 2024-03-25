@@ -1,7 +1,7 @@
 import { Player } from "./player";
 
 export interface IAppStateService {
-    squares: Player[];
+    squares: number[][];
     xIsNext: boolean;
     winner: Player | null;
     playerTurn: Player;
